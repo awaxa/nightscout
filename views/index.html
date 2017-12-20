@@ -30,101 +30,10 @@
 	  <link rel="stylesheet" type="text/css" href="css/main.css?v=<%= locals.cachebuster %>" media="none" onload="if(media!='all')media='all'" />
       <link rel="stylesheet" type="text/css" href="css/ui-darkness/jquery-ui.min.css" media="none" onload="if(media!='all')media='all'">
 
-<style media="screen" type="text/css">
-
-#centerMessagePanel
-{
-  position:fixed;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #000000;
-   z-index: 1000;
-}
-
-#loadingMessage {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: 90%;
-    top: 30%;
-    left: 0%;
-    font-size: 16px;
-}​
-
-.spinner {
-  margin: 100px auto 0;
-  width: 70px;
-  text-align: center;
-}
-
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
-
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 40% { 
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-  }
-}
-</style>
-
     </head>
     <body>
-    	<div id="centerMessagePanel">
-    		<div id="loadingMessage">
-    			<p><img src="images/launch.png"></p>
-    			<p id="loadingMessageText">Loading the client</p>
-<div class="spinner">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>
-    		</div>
-    	</div>
         <div class="container loading" id="container">
-            <div id="toolbar">
-                <div id="buttonbar" role="navigation" aria-label="Menu" >
-                    <a id="editbutton" class="tip" original-title="Edit Mode" aria-label="Edit Mode" href="#" style="display:none;"><i class="icon-edit"></i></a>
-                    <a id="testAlarms" class="tip" original-title="Alarm Test / Smartphone Enable" aria-label="Alarm Test / Smartphone Enable" href="#"><i class="icon-volume"></i></a>
-                    <a id="drawerToggle" class="tip" original-title="Settings" aria-label="Settings" href="#"><i class="icon-menu"></i></a>
-                    <a id="lockedToggle" class="tip" original-title="Token needed for Care Portal" aria-label="Token needed for Care Portal" href="#" style="display:none;"><i class="icon-lock"></i></a>
-                    <a id="treatmentDrawerToggle" class="tip" original-title="Care Portal" aria-label="Care Portal" href="#" style="display:none;"><i class="icon-plus"></i></a>
-                    <a id="boluscalcDrawerToggle" class="tip" original-title="Bolus Wizard" aria-label="Bolus Wizard" href="#" style="display:none;"><i class="icon-calc"></i></a>
-                </div>
-                <div class="customTitle">Nightscout</div>
-            </div>
+                <div class="customTitle"> </div>
             <div id="notification" role="region" aria-label="Notification">
                 <a href="#"  aria-label="cancel" ><span></span><i class="icon-cancel-circled"></i></a>
             </div>
@@ -148,11 +57,20 @@
                     </div>
                 </div>
                 <ul class="focus-range">
-                    <li data-hours="2" class="translate">2HR</li>
-                    <li data-hours="3" class="translate">3HR</li>
-                    <li data-hours="6" class="translate">6HR</li>
-                    <li data-hours="12" class="translate">12HR</li>
-                    <li data-hours="24" class="translate">24HR</li>
+                    <li data-hours="1" class="translate">1h</li>
+                    <li data-hours="2" class="translate">2h</li>
+                    <li data-hours="3" class="translate">3h</li>
+                    <li data-hours="4" class="translate">4h</li>
+                    <li data-hours="6" class="translate">6h</li>
+                    <li data-hours="8" class="translate">8h</li>
+                    <li data-hours="10" class="translate">10h</li>
+                    <li data-hours="12" class="translate">12h</li>
+                    <li data-hours="18" class="translate">18h</li>
+                    <li data-hours="24" class="translate">24h</li>
+                    <li data-hours="30" class="translate">30h</li>
+                    <li data-hours="36" class="translate">36h</li>
+                    <li data-hours="42" class="translate">42h</li>
+                    <li data-hours="48" class="translate">48h</li>
                     <li>...</li>
                 </ul>
                 <ul class="dropdown-menu" id="viewMenu"></ul>
@@ -275,10 +193,10 @@
                     </p>
                     <div class="links">
                         <a href="https://github.com/nightscout/cgm-remote-monitor/releases" target="_blank">Release Notes</a><br />
-                        <a href="http://nightscout.github.io/pages/update-fork/">Check for Updates</a><br />
+                        <!-- <a href="http://nightscout.github.io/pages/update-fork/">Check for Updates</a><br /> -->
                         <a href="http://github.com/nightscout/cgm-remote-monitor" target="_blank">Open Source</a><br />
-                        <a href="http://www.nightscout.info" target="_blank">Nightscout Info</a><br />
-                        <a href="https://www.facebook.com/groups/cgminthecloud/" target="_blank">CGM in the Cloud</a><br />
+                        <!-- <a href="http://www.nightscout.info" target="_blank">Nightscout Info</a><br /> -->
+                        <!-- <a href="https://www.facebook.com/groups/cgminthecloud/" target="_blank">CGM in the Cloud</a><br /> -->
                     </div>
                 </fieldset>
             </form>
@@ -667,11 +585,6 @@
           </div>
         </div>
 
-
-        <div class="audio alarms">
-            <audio src="audio/alarm.mp3" preload="auto" loop="true" class="alarm mp3" type="audio/mp3"></audio>
-            <audio src="audio/alarm2.mp3" preload="auto" loop="true" class="urgent alarm2 mp3" type="audio/mp3"></audio>
-        </div>
 
         <script src="js/bundle.js?v=<%= locals.cachebuster %>"></script>
         <script src="socket.io/socket.io.js?v=<%= locals.cachebuster %>"></script>

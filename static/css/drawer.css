@@ -222,19 +222,19 @@ h1, legend,
 #toolbar {
   text-shadow: 0 0 5px black;
   display: flex;
-  height: 44px;
-  margin: 0 0 10px;
+  height: 18px;
+  /* margin: 0 0 10px; */
   padding: 0 15px 0 40px;
   position: relative;
   align-items: center;
-  background: url("../images/logo2.png") no-repeat 3px center #333;
-  border-bottom: 1px solid #999;
+  /* background: url("../images/logo2.png") no-repeat 3px center #333; */
+  /* border-bottom: 1px solid #999; */
   justify-content: space-between;
 }
 
 #toolbar .customTitle {
-  color: #ccc;
-  font-size: 16px;
+  color: #000;
+  font-size: 4px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
